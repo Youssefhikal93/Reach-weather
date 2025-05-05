@@ -27,6 +27,47 @@
 #         run: |
 #           npm run build
 #           npm run deploy
+# name: Deploy to GitHub Pages
+
+# on:
+#   push:
+#     branches: [main]
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write # Required for gh-pages to push to gh-pages branch
+#       pages: write # Required if using GitHub Pages
+#       id-token: write # Required for GitHub Actions to create tokens
+
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0 # Important for gh-pages to work properly
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Configure Git
+#         run: |
+#           git config --global user.name "youssefhikal93"
+#           git config --global user.email "youssefhikal@gmail.com"
+
+#       - name: Build
+#         run: npm run build
+
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./build
+
 name: Deploy to GitHub Pages
 
 on:
@@ -37,14 +78,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Required for gh-pages to push to gh-pages branch
-      pages: write # Required if using GitHub Pages
-      id-token: write # Required for GitHub Actions to create tokens
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Important for gh-pages to work properly
+          fetch-depth: 0
+
+      - name: Debug - List files
+        run: ls -la
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -54,16 +98,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "youssefhikal93"
-          git config --global user.email "youssefhikal@gmail.com"
-
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          ls -la build/  # Debug build output
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          enable_jekyll: false # Important for React apps
+          cname: Youssefhikal93.github.io # Optional
