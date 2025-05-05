@@ -126,7 +126,7 @@ function Main({ input, setInput, isLoading, weather, location }) {
     <div className="app">
       <h1>🌤️ Weatherak⚡</h1>
       <input
-        placeholder="Enter your location.... 🔍"
+        placeholder="Enter a location.... 🔍"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       ></input>
