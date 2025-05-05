@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 
 function getWeatherIcon(wmoCode) {
   const icons = new Map([
