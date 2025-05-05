@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Reach-weather/static/css/main.21998b5e.css",
-    "main.js": "/Reach-weather/static/js/main.6ea780cd.js",
+    "main.css": "/Reach-weather/static/css/main.a1cf092e.css",
+    "main.js": "/Reach-weather/static/js/main.14f0601c.js",
     "index.html": "/Reach-weather/index.html",
-    "main.21998b5e.css.map": "/Reach-weather/static/css/main.21998b5e.css.map",
-    "main.6ea780cd.js.map": "/Reach-weather/static/js/main.6ea780cd.js.map"
+    "main.a1cf092e.css.map": "/Reach-weather/static/css/main.a1cf092e.css.map",
+    "main.14f0601c.js.map": "/Reach-weather/static/js/main.14f0601c.js.map"
   },
   "entrypoints": [
-    "static/css/main.21998b5e.css",
-    "static/js/main.6ea780cd.js"
+    "static/css/main.a1cf092e.css",
+    "static/js/main.14f0601c.js"
   ]
 }
