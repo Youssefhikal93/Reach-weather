@@ -17,31 +17,41 @@ A responsive weather application built with React that displays current and fore
 ## 📦 Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone [your-repo-url]
-   Navigate to the project directory:
+   git clone https://github.com/Youssefhikal93/Reach-weather
    ```
 
-bash
+   Navigate to the project directory:
+
+```bash
 cd weather-react-app
+```
+
 Install dependencies:
 
-bash
+```bash
 npm install
+```
+
 Start the development server:
 
-bash
+```bash
 npm start
+```
+
 🌐 API Used
-This app uses the following free APIs:
 
-Open-Meteo - For weather forecast data
+### This app uses the following free APIs:
 
-Geocoding API - For location coordinates
+### Open-Meteo - For weather forecast data
 
-FlagCDN - For country flags
+### Geocoding API - For location coordinates
 
-🛠️ Technologies
+### FlagCDN - For country flags
+
+## 🛠️ Technologies
+
 React (with Hooks: useState, useEffect)
 
 CSS for styling
@@ -50,7 +60,8 @@ Fetch API for data retrieval
 
 AbortController for clean API request cancellation
 
-📝 Code Structure
+## 📝 Code Structure
+
 App.js: Main component with state management and API calls
 
 Weather display components:
@@ -68,15 +79,3 @@ getWeatherIcon: Maps WMO codes to emoji icons
 convertToFlag: Displays country flag
 
 formatDay: Formats date to weekday
-
-📸 Screenshot
-Weather App Screenshot <!-- Add your screenshot here -->
-
-🔧 Customization
-You can easily customize:
-
-Weather icons by modifying the getWeatherIcon function
-
-Styling in App.css
-
-API endpoints if needed
