@@ -1,6 +1,6 @@
 # 🌤️ Weather App - React
 
-### [Live-website](https://Youssefhikal93.github.io/Reach-weather)
+### [Live-website](https://Youssefhikal93.github.io/React-weather-by-location)
 
 A responsive weather application built with React that displays current and forecasted weather data for any location worldwide.
 
